@@ -185,6 +185,7 @@ void AdvancedNetworking::refresh() {
 }
 
 void AdvancedNetworking::toggleTethering(bool enabled) {
+  Hardware::set_tethering_enabled(enabled);
   wifi->setTetheringEnabled(enabled);
   tetheringToggle->setEnabled(false);
 }
